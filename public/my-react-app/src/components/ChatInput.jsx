@@ -82,9 +82,9 @@ export default function ChatInput({ handleSendMsg }) {
       <div className="button-container">
         <div className="emoji">
           <BsEmojiSmileFill onClick={toggleEmojiPicker} />
-          {showEmojiPicker && (
-            <Picker onEmojiClick={handleEmojiClick} disableSearchBar disableSkinTonePicker />
-          )}
+          {showEmojiPicker && 
+            <Picker onEmojiClick={handleEmojiClick} />
+          }
         </div>
       </div>
       <form className="input-container" onSubmit={sendChat}>
@@ -129,9 +129,9 @@ const Container = styled.div`
         cursor: pointer;
 
       }
-      .emoji-picker-react {
+      .EmojiPickerReact {
         position: absolute;
-        top: -350px;
+        top: -480px;
         background-color: #080420;
         box-shadow: 0 5px 10px #9a86f3;
         border-color: #9a86f3;

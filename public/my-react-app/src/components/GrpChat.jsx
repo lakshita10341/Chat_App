@@ -11,13 +11,13 @@ function GrpChat() {
   const socket = io("http://localhost:5000");
   const messageContainer = useRef();
   const navigate = useNavigate();
-  // const append = (message, position) => {
-  //   const messageElement = document.createElement("div");
-  //   messageElement.innerText = message;
-  //   messageElement.classList.add("message");
-  //   messageElement.classList.add(position);
-  //   messageContainer.current.appendChild(messageElement);
-  // };
+  const append = (message, position) => {
+    const messageElement = document.createElement("div");
+    messageElement.innerText = message;
+    messageElement.classList.add("message");
+    messageElement.classList.add(position);
+    messageContainer.current.appendChild(messageElement);
+  };
 
   // const append = (message, position) => {
   //   const messageElement = document.createElement("div");
@@ -29,7 +29,7 @@ function GrpChat() {
   //   } else {
   //     messageElement.classList.add(position);
   //   }
-  
+ 
   //   if (message.includes("left the chat") || message.includes("joined the chat")) {
   //     const leftMessageContainer = document.getElementById("leftMessageContainer");
   //     leftMessageContainer.insertBefore(messageElement, messageContainer.current.firstChild);
@@ -38,19 +38,19 @@ function GrpChat() {
   //   }
   // };
 
-  const append = (message, position) => {
-    const messageElement = document.createElement("div");
-    messageElement.innerText = message;
-    messageElement.classList.add("message");
+  // const append = (message, position) => {
+  //   const messageElement = document.createElement("div");
+  //   messageElement.innerText = message;
+  //   messageElement.classList.add("message");
   
-    if (message.includes("left the chat") || message.includes("joined the chat")) {
-      messageElement.classList.add("middle");
-      messageContainer.current.insertBefore(messageElement, messageContainer.current.firstChild);
-    } else {
-      messageElement.classList.add(position);
-      messageContainer.current.appendChild(messageElement);
-    }
-  };
+  //   if (message.includes("left the chat") || message.includes("joined the chat")) {
+  //     messageElement.classList.add("middle");
+  //     messageContainer.current.insertBefore(messageElement, messageContainer.current.firstChild);
+  //   } else {
+  //     messageElement.classList.add(position);
+  //     messageContainer.current.appendChild(messageElement);
+  //   }
+  // };
 
   const handleClick = () => {
  socket.disconnect();
@@ -102,14 +102,14 @@ function GrpChat() {
           socket.emit("new-user-joined", userData.Username);
 
           socket.on("user-joined", (name) => {
-            append(`${name} joined the chat`, "middle");
+            append(`${name} joined the chat`, "left");
           });
           socket.on("recieve", (data) => {
             append(`${data.name} : ${data.message}`, "left");
           });
 
           socket.on("left", (name) => {
-            append(`${name} left the chat`, "middle");
+            append(`${name} left the chat`, "left");
           });
         }
       } catch (error) {
@@ -141,7 +141,7 @@ function GrpChat() {
 
           <div className="chat-messages">
             <div className="messages clearfix" ref={messageContainer}>
-            <div id="leftMessageContainer"></div>
+            {/* <div id="leftMessageContainer"></div> */}
             </div>
         
           </div>

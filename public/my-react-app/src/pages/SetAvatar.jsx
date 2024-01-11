@@ -59,7 +59,8 @@ export default function SetAvatar() {
   };
   
   useEffect(async () => {
-   
+    const fetchData = async () => {
+      try{ 
     const data = [];
 
     for (let i = 0; i < 4; i++) {
@@ -71,8 +72,12 @@ export default function SetAvatar() {
     }
     setAvatars(data);
     setIsLoading(false);
+  }catch(error){
+    console.log("error: ", error);
+  }
   
-  
+    };
+    fetchData();
   }, []);
 
   return (
