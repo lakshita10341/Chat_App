@@ -58,27 +58,50 @@ export default function SetAvatar() {
     }
   };
   
-  useEffect(async () => {
-    const fetchData = async () => {
-      try{ 
-    const data = [];
+  // useEffect(async () => {
+  //   const fetchData = async () => {
+  //     try{ 
+  //   const data = [];
 
-    for (let i = 0; i < 4; i++) {
-      const image = await axios.get(
-        `${api}/${Math.round(Math.random() * 1000)}`
-      );
-      const buffer = new Buffer.from(image.data);
-      data.push(buffer.toString("base64"));
-    }
-    setAvatars(data);
-    setIsLoading(false);
-  }catch(error){
-    console.log("error: ", error);
-  }
+  //   for (let i = 0; i < 4; i++) {
+  //     const image = await axios.get(
+  //       `${api}/${Math.round(Math.random() * 1000)}`
+  //     );
+  //     const buffer = new Buffer.from(image.data);
+  //     data.push(buffer.toString("base64"));
+  //   }
+  //   setAvatars(data);
+  //   setIsLoading(false);
+  // }catch(error){
+  //   console.log("error: ", error);
+  // }
   
+  //   };
+  //   fetchData();
+  // }, []);
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = [];
+  
+        for (let i = 0; i < 4; i++) {
+          const image = await axios.get(`${api}/${Math.round(Math.random() * 1000)}`);
+          const buffer = new Buffer.from(image.data);
+          data.push(buffer.toString("base64"));
+        }
+  
+        setAvatars(data);
+        setIsLoading(false);
+      } catch (error) {
+        console.error("Error: ", error);
+      }
     };
+  
     fetchData();
   }, []);
+  
 
   return (
     <>

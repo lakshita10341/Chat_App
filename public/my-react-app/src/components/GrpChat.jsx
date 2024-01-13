@@ -19,78 +19,16 @@ function GrpChat() {
     messageContainer.current.appendChild(messageElement);
   };
 
-  // const append = (message, position) => {
-  //   const messageElement = document.createElement("div");
-  //   messageElement.innerText = message;
-  //   messageElement.classList.add("message");
-  
-  //   if (message.includes("left the chat") || message.includes("joined the chat")) {
-  //     messageElement.classList.add("middle");
-  //   } else {
-  //     messageElement.classList.add(position);
-  //   }
- 
-  //   if (message.includes("left the chat") || message.includes("joined the chat")) {
-  //     const leftMessageContainer = document.getElementById("leftMessageContainer");
-  //     leftMessageContainer.insertBefore(messageElement, messageContainer.current.firstChild);
-  //   } else {
-  //     messageContainer.current.appendChild(messageElement);
-  //   }
-  // };
-
-  // const append = (message, position) => {
-  //   const messageElement = document.createElement("div");
-  //   messageElement.innerText = message;
-  //   messageElement.classList.add("message");
-  
-  //   if (message.includes("left the chat") || message.includes("joined the chat")) {
-  //     messageElement.classList.add("middle");
-  //     messageContainer.current.insertBefore(messageElement, messageContainer.current.firstChild);
-  //   } else {
-  //     messageElement.classList.add(position);
-  //     messageContainer.current.appendChild(messageElement);
-  //   }
-  // };
 
   const handleClick = () => {
  socket.disconnect();
     navigate('/');
   };
 
-  // const append = (message, position) => {
-  //   const messageElement = document.createElement("div");
-  //   messageElement.innerText = message;
-  //   messageElement.classList.add("message");
-  
-  //   if (message.includes("left the chat") || message.includes("joined the chat")) {
-  //     messageElement.classList.add("middle");
-  //   } else {
-  //     messageElement.classList.add(position);
-  //   }
-  
-  //   messageContainer.current.appendChild(messageElement);
-  // };
   
   
   
   
-  // const append = (message, position) => {
-  //   const messageElement = document.createElement("div");
-  //   messageElement.innerText = message;
-  //   messageElement.classList.add("message");
-  //   messageElement.classList.add(position);
-  
-    // Add a conditional check for "left" messages
-  //   if (!message.includes("left the chat")) {
-  //     messageContainer.current.appendChild(messageElement);
-  //   } else {
-  //     const leftMessageContainer = document.getElementById("leftMessageContainer");
-  //     leftMessageContainer.appendChild(messageElement);
-  //   }
-  // };
-
-  //   const messageElement =
-  // }
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -183,6 +121,7 @@ const Container = styled.div`
           display: flex;
           img {
             height: 3rem;
+            border-radius: 25%;
           }
         }
       }
