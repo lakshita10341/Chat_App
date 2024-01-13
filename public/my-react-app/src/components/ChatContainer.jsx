@@ -137,6 +137,9 @@ const Container = styled.div`
         img {
           height: 3rem;
         }
+        h1{
+          padding-top: 1rem;
+        }
       }
     }
   }

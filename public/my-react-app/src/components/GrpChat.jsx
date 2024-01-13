@@ -123,6 +123,9 @@ const Container = styled.div`
             height: 3rem;
             border-radius: 25%;
           }
+          h1{
+            padding-top: 1rem;
+          }
         }
       }
       button{
