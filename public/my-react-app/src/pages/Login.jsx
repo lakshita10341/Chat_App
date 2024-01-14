@@ -74,6 +74,9 @@ const FormContainer = styled.div`
       text-transform: uppercase;
       text-decoration: none;
       font-weight: bold;
+      a{
+        text-decoration: none;
+      }
     }
   }`;
 
@@ -151,7 +154,7 @@ export default function Login() {
         <form onSubmit={(event) => handleSubmit(event)}>
           <div className="brand">
             <img src={Logo} alt="logo" />
-            <h1>WhisperVanish</h1>
+            <h1>WhispersVanish</h1>
           </div>
           <input
             type="text"
@@ -170,7 +173,7 @@ export default function Login() {
           
           <button type="submit">LOGIN</button>
           <span>
-            Don't have an account?<Link to="/register">Register</Link>
+            Don't have an account?<Link to="/register"> Register</Link>
           </span>
         </form>
       </FormContainer>

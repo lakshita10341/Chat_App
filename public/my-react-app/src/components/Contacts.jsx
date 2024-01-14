@@ -33,7 +33,7 @@ export default function Contacts({ contacts, currentUser, changeChat}) {
         <Container>
           <div className="brand">
             <img src={Logo} alt="logo" />
-            <h3>WhisperVanish</h3>
+            <h3>WhispersVanish</h3>
           </div>
           <div className="contacts">
           <div className="groupChatButton">
