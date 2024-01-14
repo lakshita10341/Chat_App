@@ -14,10 +14,11 @@ app.use(express.json());
 app.use("/api/auth",userRoutes);
 app.use("/api/messages", msgRoutes);
 
-mongoose.connect(process.env.MONGO_URL,{
+mongoose.connect(process.env.MONGO_URL,{ 
    
-    useNewUrlParser : true,
-    useUnifiedTopology: true,
+    // useNewUrlParser : true,
+    // useUnifiedTopology: true,
+    serverSelectionTimeoutMS: 5000 ,
 }).then(()=>{
     console.log("DB connection successful");
 }).catch((err)=>{
@@ -45,7 +46,7 @@ io.on("connection",(socket)=>{
     });
 
     socket.on("send-msg",(data)=>{
-        console.log("sendmsg ", {data});
+        // console.log("sendmsg ", {data});
         const sendUserSocket = onlineUsers.get(data.to);
         if(sendUserSocket){
             socket.to(sendUserSocket).emit("msg-recieve",data.message);
