@@ -125,6 +125,7 @@ const Container = styled.div`
           }
           h1{
             padding-top: 1rem;
+            padding-left : 0.5rem;
           }
         }
       }
@@ -154,11 +155,11 @@ border-radius : 0.5rem;
           border-radius: 1rem;
         }
       }
-      .clearfix::after {
-        content: "";
-        display: table;
-        clear: both;
-      }
+      // .clearfix::after {
+      //   content: "";
+      //   display: table;
+      //   clear: both;
+      // }
       .messages{ 
           
       
@@ -183,13 +184,7 @@ border-radius : 0.5rem;
         float: left;
         clear: both;
       }
-      .middle{
-        background-color: white;
-        border-radius: 0%;
-        color: black;
-        text-align: center;
-        
-      }
+   
     }
   }
 `;

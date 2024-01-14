@@ -139,6 +139,7 @@ const Container = styled.div`
         }
         h1{
           padding-top: 1rem;
+          padding-left : 0.5rem;
         }
       }
     }

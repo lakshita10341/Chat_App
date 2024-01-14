@@ -1,72 +1,3 @@
-// import React, { useState, useEffect } from "react";
-// import styled from "styled-components";
-// import Logo from "../Assets/Logo.png";
-// export default function Contacts({ contacts, currentUser, changeChat }) {
-//   const [currentUserName, setCurrentUserName] = useState(undefined);
-//   const [currentUserImage, setCurrentUserImage] = useState(undefined);
-//   const [currentSelected, setCurrentSelected] = useState(undefined);
-//   useEffect(() => {
-  
-//     if (currentUser) {
-//       setCurrentUserImage(currentUser.avatarImage);
-//       setCurrentUserName(currentUser.Username);
-//     }
-  
-//   }, [currentUser]);
- 
-//   const changeCurrentChat = (index, contact) => {
-    
-//     setCurrentSelected(index);
-//     changeChat(contact);
-   
-//   };
-//   return (
-//     <>
-//       {currentUserImage && currentUserName && (
-//         <Container>
-//           <div className="brand">
-//             <img src={Logo} alt="logo" />
-//             <h3>WhisperVanish</h3>
-//           </div>
-//           <div className="contacts">
-//             {contacts.map((contact, index) => {
-//               return (
-//                 <div
-//                   className={`contact  ${
-//                     index === currentSelected ? "selected" : ""
-//                   }`}
-//                   onClick ={()=>changeCurrentChat(index, contact)}
-//                   key={index}
-//                 >
-//                   <div className="avatar">
-//                     <img
-//                       src={`data:image/svg+xml;base64,${contact.avatarImage}`}
-//                       alt="avatar"
-//                     />
-//                   </div>
-//                   <div className="username">
-//                     <h3>{contact.Username}</h3>
-//                   </div>
-//                 </div>
-//               );
-//             })}
-//           </div>
-//           <div className="currentUser">
-//             <div className="avatar">
-//               <img
-//                 src={`data:image/svg+xml;base64,${currentUserImage}`}
-//                 alt="avatar"
-//               />
-//             </div>
-//             <div className="username">
-//               <h2>{currentUserName}</h2>
-//             </div>
-//           </div>
-//         </Container>
-//       )}
-//     </>
-//   );
-// }
 
 
 import React, { useState, useEffect } from "react";
@@ -105,6 +36,10 @@ export default function Contacts({ contacts, currentUser, changeChat}) {
             <h3>WhisperVanish</h3>
           </div>
           <div className="contacts">
+          <div className="groupChatButton">
+            <button onClick={startGroupChat}>Join Session</button>
+          </div>
+
             {contacts.map((contact, index) => {
               return (
                 <div
@@ -126,9 +61,7 @@ export default function Contacts({ contacts, currentUser, changeChat}) {
                 </div>
               );
             })}
-                <div className="groupChatButton">
-            <button onClick={startGroupChat}>Join Session</button>
-          </div>
+                
           </div>
           <div className="currentUser">
             <div className="avatar">

@@ -1,6 +1,7 @@
 import React,{useEffect, useState} from 'react';
 import styled from 'styled-components';
-import Robot from "../Assets/robot.gif"
+import Robot from "../Assets/robot.gif";
+import Logout from "./Logout";
 
 
 export default function Welcomes() {
@@ -27,6 +28,9 @@ export default function Welcomes() {
     
   return (
     <Container>
+      <div class="logout"> 
+      <Logout />
+      </div>
         <img src={Robot}/>
         <div>
         <h1>Welcome, <span>{UserName}!</span></h1>
@@ -37,6 +41,13 @@ export default function Welcomes() {
 }
 const Container = styled.div`
 
+position: relative;
+  .logout{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+
+  }
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
