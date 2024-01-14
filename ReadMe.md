@@ -1,7 +1,22 @@
-<!-- Whisper Vanish is a messaging application in which you can do private conversations as you do in other apps additionally it provides an extra feature where you can do group chats and in which a user can join the chat and leave the chat, once he leave the session, all the conversations will be deleted. -->
-WhisperVanish is a unique chatroom service where user can join the chat and leave the chat with all the message disappearing when a user leaves the session. Additionally it provides an extra feature where users can do private conversations with all the messages remained save.
-How to use the app:
-1. Login with your username and password if any otherwise first register. Then set an avatar for you.  
-   (next time you did not need to login)
-2. Then select a contact you want to chat with. If you want to logout your account you can do this by clicking on top left logout sign. 
-3. If you want to chat in a group where messages will get disappeared after leaving session you can click on "Join Session" button.
+
+
+Introducing WhisperVanish, the innovative chatroom service that poffers a unique experience for users. Here's your guide to maximizing your experience with this app:
+
+Registration and Login:
+1. If you're new to WhisperVanish, sign up effortlessly by choosing a username and password. And if you're already part of our community, simply log in to access your account.
+2. Set a personalized avatar for your profile.
+3. The best part? Once you've registered, subsequent visits won't require another login. We've made the process seamless for your convenience.
+
+Choosing Contacts:
+1.  After logging in, choose the contact you want to engage in a conversation with.
+2.  To log out, click on the logout sign located at the top-left corner of the screen.
+
+Group Chat with Disappearing Messages:
+1. If you prefer a group chat where messages vanish after leaving the session, click on the "Join Session" button.
+2. Enjoy a secure and transient communication experience with this unique feature.
+
+Private Conversations:
+ 1. For private one-on-one conversations with messages retained, initiate a chat with your selected contact.
+2. Your private messages will remain saved for future reference.
+
+WhisperVanish combines the convenience of traditional messaging with the added benefits of ephemeral group chats and secure, persistent private conversations. Dive into a new world of transient communication with WhisperVanish!
