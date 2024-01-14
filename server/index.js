@@ -16,9 +16,9 @@ app.use("/api/messages", msgRoutes);
 
 mongoose.connect(process.env.MONGO_URL,{ 
    
-    // useNewUrlParser : true,
-    // useUnifiedTopology: true,
-    serverSelectionTimeoutMS: 5000 ,
+    useNewUrlParser : true,
+    useUnifiedTopology: true,
+    // serverSelectionTimeoutMS: 5000 ,
 }).then(()=>{
     console.log("DB connection successful");
 }).catch((err)=>{
